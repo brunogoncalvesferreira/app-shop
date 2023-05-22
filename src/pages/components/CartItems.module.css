@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #111827;
+}
+
+.container .content {
+  flex: 1;
+}
+
+.container h2 {
+  font-size: 0.875rem;
+}
+
+.container .control {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.container .control span {
+  width: 3rem;
+  background-color: #030712;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .control button {
+  background-color: #0891b2;
+  width: 2rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.container .control button:hover {
+  background-color: #0685b3;
+}

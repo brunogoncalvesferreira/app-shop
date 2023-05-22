@@ -1,0 +1,32 @@
+.header {
+  padding: 0.5rem 0;
+  background-color: #111827;
+  width: 100%;
+  border-bottom: 4px solid #0891b2;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header nav {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header nav .logo a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.header nav ul a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
