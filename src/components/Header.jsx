@@ -5,7 +5,7 @@ import { useContext } from "react"
 import { Contexts } from "./Contexts"
 
 export function Header() {
-  const { CartItemsTotal } = useContext(Contexts)
+  const { ItemsLength } = useContext(Contexts)
   return (
     <header className={styles.header}>
       <nav>
@@ -19,7 +19,7 @@ export function Header() {
         <ul>
           <NavLink to={"/carrinho"}>
             Cart <ShoppingCart size={20} />
-            <span>{CartItemsTotal}</span>
+            <span>{ItemsLength}</span>
           </NavLink>
         </ul>
       </nav>

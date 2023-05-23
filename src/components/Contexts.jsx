@@ -13,29 +13,67 @@ export function ContextProvider({ children }) {
         "https://api.mercadolibre.com/sites/MLB/search?q=celular"
       )
       const data = await response.json()
-      console.log(data.results)
       setItems(data.results)
     }
     fetchData()
   }, [])
 
-  function addItemToCart(item) {
-    setCart((prevState) => [...prevState, item])
+  function addItemsToCart(itemID) {
+    const existItemToCart = cart.find((item) => item.id === itemID.id)
+    if (existItemToCart) {
+      const updateItemsCart = cart.map((items) => {
+        if (items.id === itemID.id) {
+          return {
+            ...items,
+            quantity: items.quantity + 1,
+          }
+        }
+        return items
+      })
+      setCart(updateItemsCart)
+    } else {
+      const newItem = {
+        ...itemID,
+        quantity: 1,
+      }
+      setCart([...cart, newItem])
+    }
   }
 
-  function deleteItemCart(itemID) {
-    const actionDelete = cart.filter((item) => item.id !== itemID)
-    setCart(actionDelete)
+  function removeItemsToCart(itemID) {
+    const existItemToCart = cart.find((item) => item.id === itemID.id)
+    if (existItemToCart.quantity === 1) {
+      const updateItemsCart = cart.filter((items) => items.id !== itemID.id)
+      setCart(updateItemsCart)
+    } else {
+      const updateCartItems = cart.map((items) => {
+        if (items.id === itemID.id) {
+          return { ...items, quantity: items.quantity - 1 }
+        }
+        return items
+      })
+      setCart(updateCartItems)
+    }
   }
 
-  const CartItemsTotal = cart.length
+  function sumTotalCart() {
+    const sumItemsCart = cart.reduce(
+      (acc, items) => acc + items.quantity * items.price,
+      0
+    )
+
+    return sumItemsCart
+  }
+
+  const ItemsLength = cart.map((item) => item).length
 
   const contextsValues = {
     items,
     cart,
-    addItemToCart,
-    CartItemsTotal,
-    deleteItemCart,
+    ItemsLength,
+    addItemsToCart,
+    removeItemsToCart,
+    sumTotalCart,
   }
   return (
     <Contexts.Provider value={contextsValues}>{children}</Contexts.Provider>

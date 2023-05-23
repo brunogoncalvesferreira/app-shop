@@ -1,5 +1,5 @@
 .header {
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   background-color: #111827;
   width: 100%;
   border-bottom: 4px solid #0891b2;
@@ -29,4 +29,18 @@
   display: flex;
   align-items: center;
   font-size: 14px;
+  position: relative;
+}
+
+.header nav ul a span {
+  position: absolute;
+  top: -0.5rem;
+  right: -1.125rem;
+  background-color: #0891b2;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

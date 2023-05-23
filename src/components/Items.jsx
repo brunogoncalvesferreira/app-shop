@@ -10,23 +10,21 @@ Items.propTypes = {
   title: PropsTypes.string,
   description: PropsTypes.string,
   price: PropsTypes.number,
-  handleAddToCart: PropsTypes.func,
 }
 
 export function Items({ item, image, title, price }) {
-  const { addItemToCart } = useContext(Contexts)
+  const { addItemsToCart } = useContext(Contexts)
 
-  function handleAddCart() {
-    addItemToCart(item)
+  function handleAdd() {
+    addItemsToCart(item)
   }
-
   return (
     <div className={styles.container}>
       <div className={styles.container}>
         <img src={image} alt={title} />
         <h2>{title}</h2>
         <span>R$ {price.toFixed(2)}</span>
-        <button onClick={handleAddCart}>add to cart</button>
+        <button onClick={handleAdd}>add to cart</button>
       </div>
     </div>
   )
