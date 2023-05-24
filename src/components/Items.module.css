@@ -1,29 +1,52 @@
-.container {
-  background-color: #111827;
-  padding: 1rem;
+.container div {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 1.5rem;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+  padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 0 1em rgba(43, 41, 41, 0.4);
 }
 
-.container h2 {
-  text-align: center;
+div + div {
+  margin-top: 2rem;
+}
+
+.container div h2 {
   font-size: 1.125rem;
-  margin: 0.5rem 0;
+  font-weight: 500;
+  color: #111827;
+  flex: 1;
 }
 
-.container button {
-  background-color: #0891b2;
-  border: none;
+.container div span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #075985;
+}
+
+.container div button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #075985;
+  background-color: transparent;
   border-radius: 4px;
-  padding: 0.4rem 1.5rem;
-  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: #075985;
   transition: 300ms;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #f3f4f6;
-  margin-top: 0.5rem;
+}
+
+.container div button:hover {
+  cursor: pointer;
+  background-color: #075985;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .container div {
+    flex-direction: column;
+  }
+
+  .container div h2 {
+    text-align: center;
+  }
 }

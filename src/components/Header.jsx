@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 import styles from "./Header.module.css"
-import { ShoppingBag, ShoppingCart } from "@phosphor-icons/react"
+import { ShoppingCart } from "@phosphor-icons/react"
 import { useContext } from "react"
 import { Contexts } from "./Contexts"
 
@@ -11,8 +11,7 @@ export function Header() {
       <nav>
         <div className={styles.logo}>
           <NavLink to={"/"}>
-            <ShoppingBag />
-            Shop
+            Smart<span>Shop</span>{" "}
           </NavLink>
         </div>
 

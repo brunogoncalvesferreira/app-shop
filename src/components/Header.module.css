@@ -1,46 +1,59 @@
 .header {
   padding: 1rem 0;
-  background-color: #111827;
   width: 100%;
-  border-bottom: 4px solid #0891b2;
+  background-color: #d9d9d9;
   position: fixed;
   top: 0;
   left: 0;
+  box-shadow: 0 0 0.5px rgba(0, 0, 0, 0.2);
 }
 
 .header nav {
   max-width: 900px;
   width: 90%;
-  margin: 0 auto;
-
+  margin-inline: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .header nav .logo a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 14px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.header nav .logo a span {
+  font-size: 1rem;
+  color: #075985;
 }
 
 .header nav ul a {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #111827;
   position: relative;
 }
 
 .header nav ul a span {
   position: absolute;
-  top: -0.5rem;
-  right: -1.125rem;
-  background-color: #0891b2;
+  top: -6px;
+  right: -20px;
   width: 1.5rem;
   height: 1.5rem;
+  background-color: #075985;
+  color: #fff;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-content: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .header nav ul a span {
+    right: -10px;
+  }
 }

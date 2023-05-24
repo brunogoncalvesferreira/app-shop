@@ -20,7 +20,7 @@ export function Items({ item, image, title, price }) {
   }
   return (
     <div className={styles.container}>
-      <div className={styles.container}>
+      <div>
         <img src={image} alt={title} />
         <h2>{title}</h2>
         <span>R$ {price.toFixed(2)}</span>

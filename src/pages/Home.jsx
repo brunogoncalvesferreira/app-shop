@@ -17,7 +17,8 @@ export function Home() {
           <Loading />
         ) : (
           <div>
-            <h1>Lista de produtos</h1>
+            <h1>Smartphones</h1>
+            <p>Abaixo uma lista de celulares para cada tipo de pessoa.</p>
             <div className={styles.wrapper}>
               {items.map((item) => (
                 <Items

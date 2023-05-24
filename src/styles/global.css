@@ -5,10 +5,11 @@
   list-style: none;
   text-decoration: none;
   outline: none;
-  color: #f3f4f6;
-  font-family: "Noto Sans";
+  font-family: "Poppins", sans-serif;
 }
 
-body {
-  background-color: #030712;
+@media (max-width: 768px) {
+  html {
+    font-size: 80.5%;
+  }
 }
