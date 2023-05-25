@@ -30,13 +30,14 @@ export function CartItems({ items, image, title, price }) {
         <img src={image} alt={title} />
         <div className={styles.content}>
           <h2>{title}</h2>
-          <span>R$ {price.toFixed(2).replace(".", ",")}</span>
-        </div>
-
-        <div className={styles.control}>
-          <button onClick={handleAdd}>+</button>
-          <span>{items.quantity}</span>
-          <button onClick={handleRemove}>-</button>
+          <footer className={styles.control}>
+            <span>R$ {price.toFixed(2).replace(".", ",")}</span>
+            <div className={styles.buttons}>
+              <button onClick={handleAdd}>+</button>
+              <strong>{items.quantity}</strong>
+              <button onClick={handleRemove}>-</button>
+            </div>
+          </footer>
         </div>
       </div>
     </div>

@@ -16,7 +16,7 @@ export function Cart() {
       <main>
         <strong>TOTAL: R$ {totalCart.toFixed(2).replace(".", ",")}</strong>
         {cart.length === 0 ? (
-          "Seu carrinho está vazinho"
+          <p>Carrinho vazio</p>
         ) : (
           <div className={styles.wrapper}>
             {cart.map((item) => (

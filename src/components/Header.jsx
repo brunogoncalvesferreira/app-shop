@@ -11,7 +11,7 @@ export function Header() {
       <nav>
         <div className={styles.logo}>
           <NavLink to={"/"}>
-            Smart<span>Shop</span>{" "}
+            Smart<span>Shop</span>
           </NavLink>
         </div>
 
